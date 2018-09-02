@@ -1,3 +1,12 @@
+
+// https://ja.nuxtjs.org/faq/github-pages/
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: 'youtube-trends'
+  }
+} : {};
+
+
 module.exports = {
   /*
   ** Headers of the page
@@ -33,11 +42,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['element-ui']
   },
   modules: [
     // この行を追加して有効化
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    ['@nuxtjs/moment', ['fa']]
   ],
 
   vuetify: {
@@ -48,5 +59,12 @@ module.exports = {
       accent: '#8c9eff',
       error: '#b71c1c'
     }
-  }
+  },
+  plugins: [
+    '~plugins/element-ui'
+  ],
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
+  ...routerBase
 }

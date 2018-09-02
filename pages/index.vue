@@ -9,7 +9,7 @@
         format="yyyy-MM-dd HH:mm"
         placeholder="Select date and time" v-on:change="update">
       </el-date-picker>
-      <a href="" target="_blank"
+      <a href="https://github.com/GitHub30/youtube-trends" target="_blank"
          style="color: black; text-decoration: none; padding: 8px; border: 2px solid; border-radius: 2px;margin-right: 16px;">GitHub</a>
     </header>
     <section class="container">

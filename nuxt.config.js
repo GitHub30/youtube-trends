@@ -1,6 +1,10 @@
 
 // https://ja.nuxtjs.org/faq/github-pages/
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {} : {};
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/youtube-trends/'
+  }
+} : {};
 
 
 module.exports = {

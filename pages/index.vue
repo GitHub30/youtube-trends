@@ -40,7 +40,7 @@
       if (process.browser) {
         window.getTrending = items => this.videos = items;
         const script = document.createElement('script');
-        script.src = 'https://script.google.com/macros/s/AKfycbyskzNPIDvHA8099w7AUcVZl0QJoHM9zkOqTvZViRpb_Cs1PbuR/exec/getTrending?callback=getTrending';
+        script.src = 'https://script.google.com/macros/s/AKfycbyskzNPIDvHA8099w7AUcVZl0QJoHM9zkOqTvZViRpb_Cs1PbuR/exec?callback=getTrending';
         document.head.appendChild(script);
       }
     },
@@ -78,7 +78,7 @@
           window.getTrending = items => this.videos = items;
           const script = document.createElement('script');
           const fileName = this.value1.toISOString().slice(0, 16) + '.json.gz';
-          script.src = 'https://script.google.com/macros/s/AKfycbyskzNPIDvHA8099w7AUcVZl0QJoHM9zkOqTvZViRpb_Cs1PbuR/exec/getTrending?callback=getTrending&fileName=' + fileName;
+          script.src = 'https://script.google.com/macros/s/AKfycbyskzNPIDvHA8099w7AUcVZl0QJoHM9zkOqTvZViRpb_Cs1PbuR/exec?callback=getTrending&fileName=' + fileName;
           document.head.appendChild(script);
         }
       }

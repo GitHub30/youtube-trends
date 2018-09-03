@@ -13,7 +13,8 @@
     "precommit": "npm run lint",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "dep": "npm run generate:gh-pages && npm run deploy"
   },
   "dependencies": {
     "@nuxtjs/moment": "^1.0.0",
